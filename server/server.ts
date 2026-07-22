@@ -3,6 +3,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from "cors";
 import connectDB from "./config/db.js";
 import authRouter from "./routes/authRoutes.js";
+import restaurantRouter from "./routes/restaurantRoutes.js";
 
 const app = express();
 //connect to mongodb
@@ -23,6 +24,8 @@ app.get('/', (req: Request, res: Response) => {
 // auth 
 
 app.use("/api/auth",authRouter)
+//restaurant 
+app.use("/api/restaurant",restaurantRouter)
 
 
 //Global error handler
