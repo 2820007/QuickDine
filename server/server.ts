@@ -6,6 +6,7 @@ import authRouter from "./routes/authRoutes.js";
 import restaurantRouter from "./routes/restaurantRoutes.js";
 import bookingRouter from "./routes/bookingRoutes.js";
 import ownerRouter from "./routes/ownerRoutes.js";
+import adminRouter from "./routes/adminRoutes.js";
 
 const app = express();
 //connect to mongodb
@@ -34,6 +35,9 @@ app.use("/api/bookings",bookingRouter)
 
 //Restaurant owner
 app.use("/api/owner",ownerRouter)
+
+//admin
+app.use("/api/admin",adminRouter)
 
 
 //Global error handler
