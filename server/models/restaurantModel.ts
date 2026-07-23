@@ -53,7 +53,7 @@ const restaurantSchema=new Schema<IRestaurant>({
 
     priceRange:{
         type:String,
-        enum:["$","$$","$$$"],
+        enum:["$","$$","$$$","$$$$"],
         required:true
 
       },
