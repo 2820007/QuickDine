@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import authRouter from "./routes/authRoutes.js";
 import restaurantRouter from "./routes/restaurantRoutes.js";
 import bookingRouter from "./routes/bookingRoutes.js";
+import ownerRouter from "./routes/ownerRoutes.js";
 
 const app = express();
 //connect to mongodb
@@ -30,6 +31,9 @@ app.use("/api/restaurant",restaurantRouter)
 //Booking
 
 app.use("/api/bookings",bookingRouter)
+
+//Restaurant owner
+app.use("/api/owner",ownerRouter)
 
 
 //Global error handler
